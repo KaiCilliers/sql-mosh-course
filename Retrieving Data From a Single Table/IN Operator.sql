@@ -11,3 +11,7 @@
 
 -- Exercise
 -- Return products with quantity in stock equal to 49, 38, and 72
+
+SELECT *
+FROM products
+WHERE quantity_in_stock IN (49, 38, 72)
