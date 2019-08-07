@@ -9,3 +9,11 @@ What happens when you apply the NOT operator to the following statement?
 OR turns into AND
 > turns into <=
 NOT (birth_date > '1990-01-01' OR points > 1000) === WHERE (birth_date <= '1990-01-01' AND points <= 1000)
+
+REGEXP
+^ indicates the start of a string
+$ indicates the end of a string
+| indicates an 'or'
+	'field|mac' === a string that contains 'field' or 'mac'
+WHERE last_name REGEXP '[gim]e' -- lastname containing 'ge' or 'ie' or 'me'
+WHERE last_name REGEXP '[a-h]e' -- range from a to h (no need to type a,b,c,d...)
