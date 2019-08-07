@@ -1,0 +1,11 @@
+Priority Order of logical operators
+	AND
+	OR
+
+What happens when you apply the NOT operator to the following statement?
+	WHERE (birth_date > '1990-01-01' OR points > 1000)
+
+> turns into <=
+OR turns into AND
+> turns into <=
+NOT (birth_date > '1990-01-01' OR points > 1000) === WHERE (birth_date <= '1990-01-01' AND points <= 1000)
