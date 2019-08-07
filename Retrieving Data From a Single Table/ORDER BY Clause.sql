@@ -1,0 +1,11 @@
+-- SELECT first_name, last_name, 10 AS points
+-- FROM customers
+-- ORDER BY first_name
+-- ORDER BY first_name DESC
+-- ORDER BY state, first_name
+-- ORDER BY state DESC, first_name
+-- ORDER BY points
+
+-- Exercise
+-- order id must be 2
+-- sort by total price in descending order
