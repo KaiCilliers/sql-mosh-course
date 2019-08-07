@@ -19,3 +19,13 @@
 -- Exercise
 -- join order_items and products
 -- select product id and name with quantity and unit price
+
+-- Why there is unit_price in two tables
+-- Unit price of product can change frequently enough to warrant duplication
+-- The unit price in order_items is the price the product was at that time
+-- The unit price in the products table is the most recent price
+-- Becasue we are showing orders, we need to use the older prices and not the (possibly) updated prices
+SELECT order_id, p.product_id, name, quantity, oi.unit_price
+FROM order_items oi
+JOIN products p
+ON oi.product_id = p.product_id
