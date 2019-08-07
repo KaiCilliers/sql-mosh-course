@@ -17,3 +17,18 @@ $ indicates the end of a string
 	'field|mac' === a string that contains 'field' or 'mac'
 WHERE last_name REGEXP '[gim]e' -- lastname containing 'ge' or 'ie' or 'me'
 WHERE last_name REGEXP '[a-h]e' -- range from a to h (no need to type a,b,c,d...)
+
+-- ^ beginning
+-- $ end
+-- | logical or
+-- [abcd]
+-- [a-f]
+
+LIMIT clause with an offset
+3 records per page
+	page 1: 1 - 3
+	page 2: 4 - 6
+	page 3: 7 - 9
+===
+SELECT * FROM my_table LIMIT 6, 3
+	this will skip records 1 to 6 and return record number 7, 8, and 9
