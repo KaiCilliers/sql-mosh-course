@@ -1,0 +1,20 @@
+MySQL related
+
+admin/root password
+	rootadmin
+
+Sections
+	Retrieving data from single table
+	Retrieving data from multiple tables
+	Insert, delete, update data
+	Summarizing data
+	Writing complex queries
+	Essential MySQL functions
+	Views
+	Stored Procedures
+	Triggers and Events
+	Transactions and Concurrency
+	Data Types
+	Designing Databases
+	Indexing for high performance
+	Securing Databases
