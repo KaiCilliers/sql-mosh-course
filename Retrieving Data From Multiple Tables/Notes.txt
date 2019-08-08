@@ -1,0 +1,13 @@
+INNER JOIN
+	Combine two tables based on certain columns, like an ID
+	Orders table(tbl_1) and customer table(tbl_2)
+	It is possible to have 80 customers, but only 20 orders
+	The result would only be 20 records
+	SELECT *
+	FROM tbl_1
+	JOIN tbl_2...
+OUTER JOINS
+	LEFT
+	would be 20 records (amount of orders)
+	RIGHT
+	would be 80 records (amount of customers)
