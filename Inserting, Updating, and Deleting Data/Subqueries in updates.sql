@@ -17,3 +17,4 @@
 -- Exercise
 -- update comments of orders where customers have more than 3000 points
 -- set comment to 'Gold Customer'
+
