@@ -1,1 +1,6 @@
 -- Varchar is short for 'variable character'
+
+-- LAST_INSERT_ID is a function that fetches the newly inserted row's generated ID
+-- SELECT LAST_INSERT_ID()
+
+Truncate table means removing all the records from it
