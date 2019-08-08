@@ -13,3 +13,15 @@
 -- Do a cross join between shippers and products
 -- using the implicit syntax
 -- and then using the explicit syntax
+-- SELECT
+-- 	sh.name,
+--     p.name
+-- FROM shippers sh, products p
+-- ORDER BY sh.name
+
+SELECT
+	sh.name as shipper,
+    p.name as product
+FROM shippers sh
+CROSS JOIN products p
+ORDER BY shipper
