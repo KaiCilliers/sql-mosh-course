@@ -14,3 +14,13 @@
 -- Exercise
 -- in sql_hr database
 -- find employees who earn more than average
+USE sql_hr;
+
+SELECT
+	first_name,
+    salary
+FROM employees
+WHERE salary > (
+	SELECT AVG(salary)
+	FROM employees
+)
