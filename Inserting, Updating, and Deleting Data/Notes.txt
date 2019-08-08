@@ -1,0 +1,1 @@
+-- Varchar is short for 'variable character'
