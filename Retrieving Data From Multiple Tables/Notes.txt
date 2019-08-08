@@ -11,3 +11,14 @@ OUTER JOINS
 	would be 20 records (amount of orders)
 	RIGHT
 	would be 80 records (amount of customers)
+
+UNION
+-- Combine results from multiple Queries
+-- Results will be added as new rows
+-- The column amount has to be equal of each table
+-- Column name is from tbl_1's column
+SELECT first_name
+FROM customers -- better example table is archived_orders
+UNION
+SELECT name
+FROM shippers -- better example table is orders
