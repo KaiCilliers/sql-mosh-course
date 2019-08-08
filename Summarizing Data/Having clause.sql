@@ -40,3 +40,35 @@
 -- 	who spen more than $100
 
 USE sql_store;
+
+-- SELECT
+-- 	 c.first_name as customers,
+--      oi.quantity * oi.unit_price as spent
+-- FROM orders o
+-- JOIN customers c
+-- 	USING (customer_id)
+-- JOIN order_items oi
+-- 	USING(order_id)
+-- WHERE c.state = 'VA'
+-- GROUP BY c.first_name
+-- HAVING spent > 0
+
+
+SELECT
+	c.customer_id,
+    c.first_name,
+    c.last_name,
+    SUM(oi.quantity * oi.unit_price) as total_sales
+FROM customers c
+JOIN orders o USING (customer_id)
+JOIN order_items oi USING (order_id)
+WHERE state = 'VA'
+GROUP BY
+	c.customer_id,
+    c.first_name,
+    c.last_name
+HAVING total_sales > 125
+
+
+
+
