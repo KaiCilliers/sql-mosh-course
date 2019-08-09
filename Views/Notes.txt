@@ -1,0 +1,3 @@
+Views don't store data. The data is stored in the actual table.
+
+A view simple provides a view to the undelining tables
