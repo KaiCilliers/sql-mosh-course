@@ -21,3 +21,30 @@
 -- Find customers who have ordered lettuce (id 3)
 -- Select customer_id, first_name, last_name
 -- use a subquery and another solution with a join
+
+-- SELECT *
+-- FROM customers
+-- WHERE customer_id IN (
+-- 	SELECT customer_id
+--     FROM order_items oi
+--     JOIN orders o USING (order_id)
+--     WHERE oi.product_id = 3
+-- )
+
+-- More readable in this situation
+SELECT
+	DISTINCT customer_id,
+    first_name,
+    last_name
+FROM customers c
+JOIN orders o USING (customer_id)
+JOIN order_items oi USING (order_id)
+WHERE oi.product_id = 3
+
+
+
+
+
+
+
+
