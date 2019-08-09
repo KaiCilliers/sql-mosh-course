@@ -1,0 +1,2 @@
+-- columns: product id, prod name, amount of orders for item,
+-- frequency (orders = 1 then 'Once' else 'Many times')
