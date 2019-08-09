@@ -1,0 +1,4 @@
+Deleted a branch with a bunch of commits?
+
+use git reflog
+then use git checkout -b <branch-name> <sha1>

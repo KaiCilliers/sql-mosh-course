@@ -35,13 +35,3 @@ WHERE invoice_total > (
 	FROM invoices
     WHERE client_id = i.client_id
 )
-
-
-
-
-
-
-
-
-
-
