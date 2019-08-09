@@ -30,5 +30,16 @@ USE sql_invoicing;
 
 -- Exercise
 -- Create a view to see the balance
--- for each client. Called clients_balance
+-- for each client. Called clients_balance (they owe - they paid)
 -- client_id, name, balance
+
+CREATE VIEW clients_balance AS
+SELECT
+	c.client_id,
+    c.name,
+    SUM(i.invoice_total - i.payment_total) as balance
+FROM clients c
+JOIN invoices i USING (client_id)
+GROUP BY c.client_id, name
+
+
