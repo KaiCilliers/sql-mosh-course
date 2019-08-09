@@ -1,0 +1,9 @@
+Aggregate functions:
+MAX()
+MIN()
+AVG()
+SUM()
+COUNT()
+
+-- aggregate functions only work on non null (NN) values
+-- they also count duplicates, use DISTINCT to avoid that
