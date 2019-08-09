@@ -1,0 +1,13 @@
+-- Date format year-month-day (2019-01-30)
+
+SELECT CURDATE(); -- 2019-08-09
+SELECT DATE_FORMAT(NOW(), '%y'); -- 19
+SELECT DATE_FORMAT(NOW(), '%Y'); -- 2019
+SELECT DATE_FORMAT(NOW(), '%m'); -- 08
+SELECT DATE_FORMAT(NOW(), '%M'); -- August
+SELECT DATE_FORMAT(NOW(), '%d'); -- 09
+SELECT DATE_FORMAT(NOW(), '%D'); -- 9th
+SELECT DATE_FORMAT(NOW(), '%D of %M %Y'); -- 9th of August 2019
+
+SELECT CURTIME(); -- 14:03:56
+SELECT TIME_FORMAT(NOW(), '%H:%i %p'); -- 14:03 PM
