@@ -41,3 +41,18 @@
 --     payment_method => TINYINT - takes 1 byte
 -- by default, return all payments
 -- Return results even if one id is provided
+DROP PROCEDURE IF EXISTS get_payments;
+DELIMITER $$
+CREATE PROCEDURE get_payments(
+	client_id INT,
+    payment_method_id TINYINT
+)
+BEGIN
+	SELECT *
+	FROM payments p
+	WHERE
+		p.client_id = IFNULL(client_id, p.client_id) AND
+        p.payment_method = IFNULL(payment_method_id, p.payment_method);
+END$$
+DELIMITER ;
+CALL get_payments(NULL,1);
