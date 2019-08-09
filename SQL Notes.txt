@@ -1,1 +1,3 @@
 MySQL related
+
+Always save all your SQL scripts
