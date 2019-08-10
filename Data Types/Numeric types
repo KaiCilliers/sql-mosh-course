@@ -1,0 +1,22 @@
+Numeric types:
+	Integer types (only wholenumbers):
+		TINYINT
+			size of 1 byte with possible values of [-128, 127]
+		UNSIGNED TINYINT
+			only accepts positive values
+			unsigned can be applied to all integer types
+			size of 1 byte with possible values of [0, 255]
+		SMALLINT
+			size of 2 byte
+		MEDIUMINT
+			size of 3 byte
+		INT
+			size of 4 byte
+		BIGINT
+			size of 8 byte
+	They have an attribute called Zerofill
+		simply allows you to specify that a numeric type has to display 5 digits at all times
+		00001
+		00039
+		Syntax:
+			INT(4) -> 0392
