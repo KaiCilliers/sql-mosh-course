@@ -5,3 +5,7 @@ before or after an insert, update, or delete statment
 we use it to enforce data consistency
 
 -- If you want to visually see your triggers, then use the  SHOW TRIGGERS statement
+
+-- It is a task or block of SQL code that gets
+-- executed according to a schedule
+-- like a timed event
