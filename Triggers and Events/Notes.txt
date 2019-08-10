@@ -1,0 +1,5 @@
+Trigger
+is a block of SQL code that automatically gets executed
+before or after an insert, update, or delete statment
+
+we use it to enforce data consistency
