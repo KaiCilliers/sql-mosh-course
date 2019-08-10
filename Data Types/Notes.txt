@@ -76,6 +76,21 @@ used for scientific calculations
 		BOOLEAN
 			synonym for tinyint
 
+Date and Time types:
+	DATE
+		 stores date without time component
+	TIME
+		store a time value
+	DATETIME
+		8 bytes
+		no year restriction
+	TIMESTAMP
+		keeping track of changes made to data (audit tables)
+		4 bytes
+		can store dates up to 2038 known as the 'year 2038 problem'
+	YEAR
+		storing a four digit year
+
 Conventions
 	Be consistent
 		VARCHAR
@@ -87,3 +102,8 @@ Extra Info
 	European Middle-eastern use 2 bytes
 	Asian use 3 bytes
 	CHAR(10) -> 30 bytes reserved
+	There is also ENUM and SET
+		ENUM('small', 'medium')
+		SET(...)
+		Don't use them that often, can be resource intensive
+		Not worth explaining in depth

@@ -1,0 +1,14 @@
+Date and Time types:
+	DATE
+		 stores date without time component
+	TIME
+		store a time value
+	DATETIME
+		8 bytes
+		no year restriction
+	TIMESTAMP
+		keeping track of changes made to data (audit tables)
+		4 bytes
+		can store dates up to 2038 known as the 'year 2038 problem'
+	YEAR
+		storing a four digit year
