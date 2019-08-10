@@ -1,0 +1,27 @@
+String types:
+	CHAR(x)
+		fixed length
+	VARCHAR(x)
+		any data not used in calculations
+		max size is 65,535 characters (~64KB)
+		any extra characters will be truncated
+	MEDIUMTEXT
+		max size 16MB (~16million characters)
+		good for storing JSON objects, CSV strings, and quotes
+	LONGTEXT
+		max size 4GB
+		good for textbooks or years of log files
+--------------------------------------------------------
+Better to use varchar instead of the below two, because
+varchar can be indexed
+--------------------------------------------------------
+	TINYTEXT
+		max size 255 bytes
+	TEXT
+		max size 64KB
+
+
+Conventions (Be consistent)
+	VARCHAR
+		length 50 for short strings
+		length 255 for medium-length strings
