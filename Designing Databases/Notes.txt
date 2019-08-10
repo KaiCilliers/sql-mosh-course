@@ -79,3 +79,8 @@ Making changes to a database
 		staging
 		development
 		testing
+
+Reverse Engineer a database
+	simply get a model from an existing database
+	popup appears that we have seen previously, just follow steps
+	during these steps you will select the DB to model for the first time
