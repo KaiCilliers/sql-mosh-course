@@ -37,3 +37,31 @@ Transaction ACID properties
 --     be aware of changes to the data made by other transactions. This is the higest level
 --     of isolation you can apply to a transaction. Resource heavy, difficult to scale.
 --     Save for when absolutly necessary.
+
+Basic overview of concurrency problems:
+Lost updates - two transaction update the same row and the one that commits last overwrites
+the changes made earlier
+Dirty reads - reading uncommitted data
+Non-repeating reads - read the same data twice in a transaction, but get different results
+Phantom reads - when we miss one or more rows in our query, because another transaction
+is changing the data and we are not aware of the changes in our transaction.
+
+Isolation levels:
+Read uncommitted - protects you from non of the basic problems
+Read committed - protects you from dirty reads
+Repeatable read -  protects you from lost updates, dirty reads, and non-repeating reads
+Serializable - protects you from all problems
+
+Lower levels of isolation provides
+	more concurrency
+    more concurrency problems
+    fewer locks
+    better performance
+    
+Higher levels of isolation provides
+	less concurrency
+    fewer concurrency problems
+    more locks
+    lower performance
+    
+The MySQL default isolation level for transactions is Repeatable Read
