@@ -64,3 +64,18 @@ Some pragmatic advice
 	Build a model for your problem domain
 	Simplicity is the ultimate sophistication
 	Don't try to predict all future requirements
+
+
+Forward Engineering a Model
+	With EER Diagram open
+	'Database' at top of window -> 'Forward Engineer...'
+	'Next' -> 'Next'
+	'Next' -> Review the script generated
+
+Making changes to a database
+	Synchronize the model of an existing database
+	this way you can easily apply changes to different databases
+		production
+		staging
+		development
+		testing
