@@ -3,3 +3,5 @@ is a block of SQL code that automatically gets executed
 before or after an insert, update, or delete statment
 
 we use it to enforce data consistency
+
+-- If you want to visually see your triggers, then use the  SHOW TRIGGERS statement
