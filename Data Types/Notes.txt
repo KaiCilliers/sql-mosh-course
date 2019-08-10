@@ -91,6 +91,17 @@ Date and Time types:
 	YEAR
 		storing a four digit year
 
+Blob types:
+	used to store large amounts of binary data
+	TINYBLOB
+		max size of 255 bytes
+	BLOB
+		max size of 65 kilobytes
+	MEDIUMBLOB
+		max size of 16 megabytes
+	LONGBLOB
+		max size of 4 gigabytes
+
 Conventions
 	Be consistent
 		VARCHAR
@@ -107,3 +118,10 @@ Extra Info
 		SET(...)
 		Don't use them that often, can be resource intensive
 		Not worth explaining in depth
+	Storing files in your database (BLOBS)
+		rather not store files in database
+		Problems include
+			increased database size
+			slower backups
+			performance problems
+			more code to read/write files (most likely images)

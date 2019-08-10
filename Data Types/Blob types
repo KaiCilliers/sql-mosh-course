@@ -1,0 +1,10 @@
+Blob types:
+	used to store large amounts of binary data
+	TINYBLOB
+		max size of 255 bytes
+	BLOB
+		max size of 65 kilobytes
+	MEDIUMBLOB
+		max size of 16 megabytes
+	LONGBLOB
+		max size of 4 gigabytes
