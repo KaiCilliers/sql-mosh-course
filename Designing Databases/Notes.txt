@@ -1,0 +1,14 @@
+Data modelling steps
+	Understand the business requirements
+	Build a conceptual model of the business (visual representation of db)
+	Build a logical model (abstract database model with column types etc.)
+	Build a physical model (implementation of a logical model)
+
+Data Models:
+	Conceptual
+		Represents the entities and their relationships
+		Two options
+			ER diagrams
+			UML diagrams
+	Logical
+	Physical
