@@ -70,6 +70,11 @@ used for scientific calculations
 		DOUBLE
 			size of 8 byte
 			stores an approximate value
+	Boolean types:
+		BOOL
+			synonym for tinyint
+		BOOLEAN
+			synonym for tinyint
 
 Conventions
 	Be consistent
