@@ -2,7 +2,7 @@ Data modelling steps
 	Understand the business requirements
 	Build a conceptual model of the business (visual representation of db)
 	Build a logical model (abstract database model with column types etc.)
-	Build a physical model (implementation of a logical model)
+	Build a physical model (implementation of a logical model) and this is where you start using a DBMS
 
 Data Models:
 	Conceptual
@@ -11,4 +11,56 @@ Data Models:
 			ER diagrams
 			UML diagrams
 	Logical
+		Here you will add the data types
+		and the intersection entities of many-to-many relationships
 	Physical
+		MySQL Workbench UI steps
+			File -> New Model
+			Under Physical Schema; rename 'mydb'
+			Locate 'Model Overview' heading -> 'Add Diagram' --> EER Diagram tab opens
+			EER (Enhanced Entity Relationship)
+			Place a new table (shortcut 'T')
+			...
+			When you created an intesection entity with a composite key then
+			select the table -> 'Foreign Keys' tab at the bottom of the window
+			Locate 'Foreign Key Options' header
+				Now these dropdown options are simply to specify what should happen
+				when a parent's id changes (not best practice to do so but ok)
+			Set 'On Update' to 'CASCADE' to update child table (intersection entity) records with new ID
+				Other options either restict the update from happening (same as no action) or sets the child IDs to null which makes the table an orphan table, which is bad data.
+			Set 'On Delete' to 'NO ACTION' or 'RESTICT' to prevent a parent record from being deleted
+				this will depend on requiremnents, like deleting financial data immediately when a student graduates would not be a smart move.
+				cascade will delete the records in the child table
+
+
+Foreign Key concerns (especially in intersection entities)
+What to make the primary key?
+	Composite key (of two foreign keys)
+		Good - you cant have the same combo of two foreign keys in table
+		Bad - if you add a third parent model that links to this table,
+		you will have to repeat the exisiting two IDs in the third table.
+		But that depends, you usually don't want that issue.
+	Auto-increment id field
+		Good - solves what if scenario above
+		Bad - extra field that might not serve a purpose
+
+Normalization (this is just a structure)
+(Don't sweat this, you ain't writing exams)
+(simply just remove duplication)
+	1NF
+		Each cell should have a single value
+		Cannot have repeated columns
+	2NF
+		Each table should describe one entity
+		Every column in that table should describe that entity
+	3NF
+		no calculated fields
+		i.e. column should noy be derived from other columns
+
+Some pragmatic advice
+	DON'T JUST JUMP INTO CREATING TABLES
+	Solve today's problem, not future problems that may never happen
+		Don't model the universe
+	Build a model for your problem domain
+	Simplicity is the ultimate sophistication
+	Don't try to predict all future requirements
