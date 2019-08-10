@@ -49,6 +49,27 @@ Numeric types:
 		00039
 		Syntax:
 			INT(4) -> 0392
+	Rational types:
+		DECIMAL(p, s)
+			p - precision sepcifies maximum amount of digits [1-65]
+			s - scale specifies the number of digits after the decimal point
+			decimal(9,2) -> 1234567.89
+		DEC
+			synonym for decimal
+		NUMERIC
+			synonym for decimal
+		FIXED
+			synonym for decimal
+--------------------------------------------------------
+Below is used when the data is going to be 
+used for scientific calculations
+--------------------------------------------------------
+		FLOAT
+			size of 4 byte
+			stores an approximate value
+		DOUBLE
+			size of 8 byte
+			stores an approximate value
 
 Conventions
 	Be consistent
