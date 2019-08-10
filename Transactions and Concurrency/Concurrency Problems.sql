@@ -1,17 +1,4 @@
--- Transaction is a group of SQL statements
--- that represent a single unit of work
-
--- All statements must complete successfully,
--- otherwise the transaction will fail
-
-Transaction ACID properties
-	* Atomicity - single unit, no matter how many statements a transaction has
-    Either they all fail or they all succceed
-    * Consistency
-    * Isolation - can not change same rows at the same time, only one transaction can run at once
-    * Durability - Once a transaction is complete, the data is committed
-
-    -- Common problems
+-- Common problems
 	-- * Lost updates - two updates updating the same record without locks in place,
 --     the first update will be overwritten and lost.
 --     You prevent this by using logs. Audit your statements.
