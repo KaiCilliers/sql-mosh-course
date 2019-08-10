@@ -3,7 +3,7 @@
 -- before or after an insert, update, or delete statment
 
 -- we use it to enforce data consistency
-
+DROP TRIGGER IF EXISTS payment_after_insert;
 DELIMITER $$
 -- notice naming convention
 -- name, when activated, what type of operation will be performed
