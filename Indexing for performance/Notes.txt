@@ -1,0 +1,11 @@
+Indexes are stored in memory
+
+Indexes cost
+incresase the database size
+slow down the writes
+	after each write (insert, delete, update) it has to update indexes
+
+Reserve indexes for performance critical queries
+Design indexes based on your queries, not your tables
+
+Internally indexes are stored in a binary tree
