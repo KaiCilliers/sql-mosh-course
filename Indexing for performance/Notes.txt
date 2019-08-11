@@ -9,3 +9,13 @@ Reserve indexes for performance critical queries
 Design indexes based on your queries, not your tables
 
 Internally indexes are stored in a binary tree
+
+Some basic rule of thumbs using indexes for sorting (ORDER BY)
+	if you have columns a and b (a, b) and they are a composite index (a, b)
+	you can sort by
+		a
+		a, b
+		a DESC, b DESC
+	you can not mix the directions
+	you can not add a third column (a, c, b)
+	you can sort by column b, but that has some restrictions, see related script about sorting
