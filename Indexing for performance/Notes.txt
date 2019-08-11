@@ -20,10 +20,21 @@ Some basic rule of thumbs using indexes for sorting (ORDER BY)
 	you can not add a third column (a, c, b)
 	you can sort by column b, but that has some restrictions, see related script about sorting
 
-	Some guidelines on choosing what to include in an index
-		look at all your 'where' clauses
-			look at the columns that appear most frequently
-		look at the columns in your 'order by' statements
-			try to include those fields
-		look at the columns used in the 'select' clause
-			try to include those fields (which makes it a covering index)
+Some guidelines on choosing what to include in an index
+	look at all your 'where' clauses
+		look at the columns that appear most frequently
+	look at the columns in your 'order by' statements
+		try to include those fields
+	look at the columns used in the 'select' clause
+		try to include those fields (which makes it a covering index)
+
+Index maintenance notes
+	duplicate indexes
+		ix_one (a, b, c)
+		ix_two (a, b, c)
+	redundant indexes
+		ix_one (a, b)
+		ix_two (a) -- redundant, ix_one satisfies the same queries as ix_two does
+		ix_three (b,a) -- not redundant if used with ix_one
+		ix_four(b) -- not redundant if used with ix_one
+	Before creating an index, check the existing ones
