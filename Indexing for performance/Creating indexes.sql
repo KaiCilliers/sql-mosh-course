@@ -17,3 +17,5 @@ CREATE INDEX ix_state ON customers (state);
 -- Exercise
 -- write a query to find the customers with more than 1000 points
 -- use explain statement and create an index to compare
+EXPLAIN SELECT customer_id FROM customers WHERE points > 1000;
+CREATE INDEX ix_points ON customers (points);
