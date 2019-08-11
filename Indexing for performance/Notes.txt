@@ -19,3 +19,11 @@ Some basic rule of thumbs using indexes for sorting (ORDER BY)
 	you can not mix the directions
 	you can not add a third column (a, c, b)
 	you can sort by column b, but that has some restrictions, see related script about sorting
+
+	Some guidelines on choosing what to include in an index
+		look at all your 'where' clauses
+			look at the columns that appear most frequently
+		look at the columns in your 'order by' statements
+			try to include those fields
+		look at the columns used in the 'select' clause
+			try to include those fields (which makes it a covering index)
